@@ -1,0 +1,46 @@
+---
+description: Git push and GitHub operations for MidiTracker (agent must use full network)
+alwaysApply: true
+---
+
+# GitHub push (agent)
+
+Repo: **david9up/miditracker** · remote **origin**
+
+## When pushing or using `gh`
+
+1. Run git/gh commands with **full shell permissions** (not sandboxed) — sandbox blocks `github.com` DNS and SSH agent.
+2. Prefer **`gh`** for GitHub tasks when available (`gh auth status` must succeed).
+3. Never commit secrets (`.env`, tokens, PAT files). Never update global git config.
+
+## Push workflow
+
+```bash
+cd /Users/davidmalcher/Projects/miditracker
+git status -sb
+git push origin main          # or feature branch
+git push origin <tag>         # after releases
+```
+
+If SSH fails in agent but works for the user, retry with HTTPS (after `gh auth setup-git`):
+
+```bash
+git remote set-url origin https://github.com/david9up/miditracker.git
+git push origin main
+```
+
+## Helper script
+
+```bash
+./scripts/push-to-github.sh [branch]
+```
+
+Runs pre-push checks (optional) and pushes with `gh` auth context.
+
+## Pages deploy
+
+Pushing to **main** triggers **Deploy GitHub Pages** workflow. No manual deploy unless workflow failed.
+
+## One-time human setup
+
+See **GITHUB_SETUP.md** — requires `gh auth login` once on this Mac.

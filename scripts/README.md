@@ -11,6 +11,7 @@ Developer utilities — not required to run the app.
 | `sample-midi-corpus.py` | Rebuild `fixtures/midi-corpus/` from local MIDI library |
 | `build-game-corpus.py` | Rebuild `fixtures/game-corpus/` from local game MIDI folder |
 | `probe-game-export.ts` | `npx tsx scripts/probe-game-export.ts` — batch export validation on game corpus |
+| `push-to-github.sh` | `./scripts/push-to-github.sh [branch]` — push to origin (see GITHUB_SETUP.md) |
 
 Corpus rebuild env vars (see `fixtures/README.md`):
 
