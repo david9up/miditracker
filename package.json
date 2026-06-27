@@ -1,0 +1,64 @@
+{
+  "name": "miditracker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Browser-based Standard MIDI to Polyend Tracker+ converter — import, edit, validate, export.",
+  "author": "David Malcher",
+  "license": "MIT",
+  "homepage": "https://david9up.github.io/miditracker/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david9up/miditracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/david9up/miditracker/issues"
+  },
+  "keywords": [
+    "midi",
+    "polyend",
+    "tracker",
+    "tracker-plus",
+    "chiptune",
+    "vue",
+    "vite",
+    "music-production"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build:pages": "GITHUB_PAGES=true npm run build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:user": "vitest run src/lib/user-smoke.test.ts",
+    "test:expert": "vitest run src/lib/expert-review.test.ts",
+    "test:all": "npm test && npm run test:user && npm run test:expert",
+    "test:e2e": "playwright test",
+    "screenshots": "playwright test tests/e2e/readme-screenshots.spec.ts",
+    "release": "npm run test:all && npm run build",
+    "validate:export": "tsx scripts/validate-export.ts"
+  },
+  "dependencies": {
+    "@polyend/tracker-lib": "^0.1.2",
+    "@tonejs/midi": "^2.0.28",
+    "jszip": "^3.10.1",
+    "midi-file": "^1.2.2",
+    "soundfont-player": "^0.12.0",
+    "vue": "^3.5.38"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.13.2",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/tsconfig": "^0.9.1",
+    "typescript": "~6.0.2",
+    "tsx": "^4.20.3",
+    "vite": "^8.1.0",
+    "vitest": "^3.2.6",
+    "vue-tsc": "^3.3.5"
+  }
+}

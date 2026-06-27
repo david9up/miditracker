@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MidiTracker">
+  <defs>
+    <radialGradient id="barrel" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#2a3344" />
+      <stop offset="55%" stop-color="#141820" />
+      <stop offset="100%" stop-color="#0a0c10" />
+    </radialGradient>
+    <radialGradient id="pin4" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#62e8ff" />
+      <stop offset="100%" stop-color="#00a8e0" />
+    </radialGradient>
+    <filter id="pin4Glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#00c8ff" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Female 5-pin DIN — round barrel, key notch at bottom -->
+  <circle cx="32" cy="32" r="28" fill="url(#barrel)" stroke="#a8b4c8" stroke-width="3.25" />
+  <path
+    d="M 26.5 58.2 A 28 28 0 0 0 37.5 58.2 L 35.8 53.2 A 23 23 0 0 1 28.2 53.2 Z"
+    fill="#0a0c10"
+    stroke="#a8b4c8"
+    stroke-width="1.25"
+    stroke-linejoin="round"
+  />
+
+  <!-- Pin holes (female socket, front view) -->
+  <circle cx="32" cy="14" r="4.1" fill="#ddd8cf" />
+  <circle cx="15" cy="26" r="4.1" fill="#ddd8cf" />
+  <circle cx="18" cy="44" r="4.1" fill="#ddd8cf" />
+  <circle cx="46" cy="44" r="4.1" fill="#ddd8cf" />
+  <g filter="url(#pin4Glow)">
+    <circle cx="49" cy="26" r="4.35" fill="url(#pin4)" />
+    <circle cx="48.3" cy="25.3" r="1.25" fill="#ecfaff" opacity="0.85" />
+  </g>
+</svg>

@@ -1,0 +1,222 @@
+{
+  "source": "game midi files",
+  "count": 54,
+  "files": [
+    {
+      "file": "01-Amiga_Turrican_Title.mid",
+      "source": "Amiga_Turrican_Title.mid"
+    },
+    {
+      "file": "02-Fish_Fry_(TR_Wolf_Edit).mid",
+      "source": "Fish_Fry_(TR_Wolf_Edit).mid"
+    },
+    {
+      "file": "03-JDC_CFTitlev11.mid",
+      "source": "JDC_CFTitlev11.mid"
+    },
+    {
+      "file": "04-Populous.mid",
+      "source": "Populous.mid"
+    },
+    {
+      "file": "05-SuperTurrican32.mid",
+      "source": "SuperTurrican32.mid"
+    },
+    {
+      "file": "06-TurricanII_LoaderTheme.mid",
+      "source": "TurricanII_LoaderTheme.mid"
+    },
+    {
+      "file": "07-a-XenonII.mid",
+      "source": "a-XenonII.mid"
+    },
+    {
+      "file": "08-arena-combat.mid",
+      "source": "arena-combat.mid"
+    },
+    {
+      "file": "09-arena-dungeon1.mid",
+      "source": "arena-dungeon1.mid"
+    },
+    {
+      "file": "10-arena-raining.mid",
+      "source": "arena-raining.mid"
+    },
+    {
+      "file": "11-arena-swimming.mid",
+      "source": "arena-swimming.mid"
+    },
+    {
+      "file": "12-azraels-tear-ingame.mid",
+      "source": "azraels-tear-ingame.mid"
+    },
+    {
+      "file": "13-betrayal-at-krondor-battle.mid",
+      "source": "betrayal-at-krondor-battle.mid"
+    },
+    {
+      "file": "14-betrayal-at-krondor-menu.mid",
+      "source": "betrayal-at-krondor-menu.mid"
+    },
+    {
+      "file": "15-betrayal-at-krondor-opening.mid",
+      "source": "betrayal-at-krondor-opening.mid"
+    },
+    {
+      "file": "16-death-gate-the-nexus.mid",
+      "source": "death-gate-the-nexus.mid"
+    },
+    {
+      "file": "17-descent-intro.mid",
+      "source": "descent-intro.mid"
+    },
+    {
+      "file": "18-descent-l01-lunar-outpost.mid",
+      "source": "descent-l01-lunar-outpost.mid"
+    },
+    {
+      "file": "19-descent-l12-callisto-tower-colony.mid",
+      "source": "descent-l12-callisto-tower-colony.mid"
+    },
+    {
+      "file": "20-discworld-alley.mid",
+      "source": "discworld-alley.mid"
+    },
+    {
+      "file": "21-discworld-dining-room.mid",
+      "source": "discworld-dining-room.mid"
+    },
+    {
+      "file": "22-discworld-kitchen.mid",
+      "source": "discworld-kitchen.mid"
+    },
+    {
+      "file": "23-discworld-outside-of-unseen-unversity.mid",
+      "source": "discworld-outside-of-unseen-unversity.mid"
+    },
+    {
+      "file": "24-doom-e1m1.mid",
+      "source": "doom-e1m1.mid"
+    },
+    {
+      "file": "25-duke-nukem-3d-grabbag.mid",
+      "source": "duke-nukem-3d-grabbag.mid"
+    },
+    {
+      "file": "26-duke-nukem-3d-stalker.mid",
+      "source": "duke-nukem-3d-stalker.mid"
+    },
+    {
+      "file": "27-gabriel-knight-bookstore.mid",
+      "source": "gabriel-knight-bookstore.mid"
+    },
+    {
+      "file": "28-gabriel-knight-intro.mid",
+      "source": "gabriel-knight-intro.mid"
+    },
+    {
+      "file": "29-gabriel-knight-map.mid",
+      "source": "gabriel-knight-map.mid"
+    },
+    {
+      "file": "30-leisure-suit-larry-6-intro.mid",
+      "source": "leisure-suit-larry-6-intro.mid"
+    },
+    {
+      "file": "31-leisure-suit-larry-6-lobby.mid",
+      "source": "leisure-suit-larry-6-lobby.mid"
+    },
+    {
+      "file": "32-quest-for-glory-iii-apothecary's-hut.mid",
+      "source": "quest-for-glory-iii-apothecary's-hut.mid"
+    },
+    {
+      "file": "33-quest-for-glory-iii-credits.mid",
+      "source": "quest-for-glory-iii-credits.mid"
+    },
+    {
+      "file": "34-realms-of-arkania-2-ingame.mid",
+      "source": "realms-of-arkania-2-ingame.mid"
+    },
+    {
+      "file": "35-realms-of-arkania-2-intro.mid",
+      "source": "realms-of-arkania-2-intro.mid"
+    },
+    {
+      "file": "36-sam-n-max.mid",
+      "source": "sam-n-max.mid"
+    },
+    {
+      "file": "37-shadow-warrior-ingame.mid",
+      "source": "shadow-warrior-ingame.mid"
+    },
+    {
+      "file": "38-shadow-warrior-intro.mid",
+      "source": "shadow-warrior-intro.mid"
+    },
+    {
+      "file": "39-space-quest-v-game-over.mid",
+      "source": "space-quest-v-game-over.mid"
+    },
+    {
+      "file": "40-space-quest-v-intro.mid",
+      "source": "space-quest-v-intro.mid"
+    },
+    {
+      "file": "41-space-quest-v-starcon-academy.mid",
+      "source": "space-quest-v-starcon-academy.mid"
+    },
+    {
+      "file": "42-space-quest-v-starcon-aptitude-test.mid",
+      "source": "space-quest-v-starcon-aptitude-test.mid"
+    },
+    {
+      "file": "43-stonekeep-demo.mid",
+      "source": "stonekeep-demo.mid"
+    },
+    {
+      "file": "44-stonekeep-the-ruins-of-stonekeep-1.mid",
+      "source": "stonekeep-the-ruins-of-stonekeep-1.mid"
+    },
+    {
+      "file": "45-stonekeep-the-ruins-of-stonekeep-2.mid",
+      "source": "stonekeep-the-ruins-of-stonekeep-2.mid"
+    },
+    {
+      "file": "46-system-shock-intro.mid",
+      "source": "system-shock-intro.mid"
+    },
+    {
+      "file": "47-test-tone.mid",
+      "source": "test-tone.mid"
+    },
+    {
+      "file": "48-tie-fighter-intro.mid",
+      "source": "tie-fighter-intro.mid"
+    },
+    {
+      "file": "49-transport-tycoon-deluxe-intro.mid",
+      "source": "transport-tycoon-deluxe-intro.mid"
+    },
+    {
+      "file": "50-under-a-killing-moon-chandler-avenue-1.mid",
+      "source": "under-a-killing-moon-chandler-avenue-1.mid"
+    },
+    {
+      "file": "51-under-a-killing-moon-rook's-pawnshop-1.mid",
+      "source": "under-a-killing-moon-rook's-pawnshop-1.mid"
+    },
+    {
+      "file": "52-under-a-killing-moon-tex's-office.mid",
+      "source": "under-a-killing-moon-tex's-office.mid"
+    },
+    {
+      "file": "53-warcraft2-human2.mid",
+      "source": "warcraft2-human2.mid"
+    },
+    {
+      "file": "54-warcraft2-orc1.mid",
+      "source": "warcraft2-orc1.mid"
+    }
+  ]
+}
