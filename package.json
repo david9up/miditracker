@@ -30,7 +30,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "build:pages": "GITHUB_PAGES=true npm run build",
+    "build:pages": "DEPLOY_PAGES=true npm run build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",

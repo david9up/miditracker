@@ -45,6 +45,15 @@ Live URL after first Pages deploy:
 
 **https://david9up.github.io/miditracker/**
 
+### Blank page troubleshooting
+
+If view-source shows HTML but the screen is blank, open DevTools → **Network** and check the main `.js` file:
+
+- **Wrong:** `https://david9up.github.io/assets/index-….js` (404)
+- **Correct:** `https://david9up.github.io/miditracker/assets/index-….js`
+
+The Pages workflow must build with `DEPLOY_PAGES=true` so Vite uses `base: '/miditracker/'`. Re-run **Actions → Deploy GitHub Pages → Run workflow** after fixing.
+
 ## GitHub Actions
 
 | Workflow | Trigger | Purpose |

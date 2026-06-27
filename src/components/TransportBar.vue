@@ -4,7 +4,9 @@
  * GM preview badge reminds that browser audio ≠ Tracker+ hardware output.
  */
 import { computed, ref } from 'vue'
+import { assetUrl } from '@/lib/asset-url'
 
+const logoUrl = assetUrl('logo-mark.svg?v=din3')
 const props = defineProps<{
   version: string
   title: string
@@ -73,7 +75,7 @@ function cancelTitleEdit() {
 <template>
   <header class="transport">
     <section class="transport__brand" aria-label="MidiTracker">
-      <img class="transport__logo" src="/logo-mark.svg?v=din3" width="64" height="64" alt="" />
+      <img class="transport__logo" :src="logoUrl" width="64" height="64" alt="" />
       <div class="transport__brand-text">
         <div class="transport__title-row">
           <strong class="transport__title">MidiTracker</strong>

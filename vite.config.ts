@@ -3,10 +3,18 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
 const DEV_PORT = Number(process.env.DEV_PORT) || 5310
-const GITHUB_PAGES = process.env.GITHUB_PAGES === 'true'
+
+/** GitHub project site: https://<user>.github.io/<repo>/ */
+function resolveBase(): string {
+  if (process.env.DEPLOY_PAGES === 'true' || process.env.GITHUB_PAGES === 'true') {
+    const repo = process.env.GITHUB_REPOSITORY?.split('/')[1]
+    return `/${repo ?? 'miditracker'}/`
+  }
+  return '/'
+}
 
 export default defineConfig({
-  base: GITHUB_PAGES ? '/miditracker/' : '/',
+  base: resolveBase(),
   plugins: [vue()],
   define: {
     __BUILD_DATE__: JSON.stringify(new Date().toISOString()),

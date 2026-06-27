@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { APP_AUTHOR, APP_BUILD_DATE, APP_VERSION } from '@/app-version'
+import { assetUrl } from '@/lib/asset-url'
 
+const logoUrl = assetUrl('logo-mark.svg?v=din3')
 const open = defineModel<boolean>({ default: false })
 
 const dialogRef = ref<HTMLDialogElement | null>(null)
@@ -31,7 +33,7 @@ function onClose() {
   >
     <form method="dialog" class="about-dialog__panel" @submit.prevent="onClose">
       <section class="about-dialog__hero" aria-label="About MidiTracker">
-        <img class="about-dialog__logo" src="/logo-mark.svg?v=din3" width="56" height="56" alt="" />
+        <img class="about-dialog__logo" :src="logoUrl" width="56" height="56" alt="" />
         <div class="about-dialog__identity">
           <div class="about-dialog__title-row">
             <h2 id="about-dialog-title" class="about-dialog__title">MidiTracker</h2>
