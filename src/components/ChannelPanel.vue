@@ -70,10 +70,7 @@ const tracks = computed(() =>
       entry,
       theme,
       label: props.trackLabels[index]?.name ?? 'Empty track',
-      shortLabel: props.trackLabels[index]?.shortName ?? '—',
-      displayName: props.trackLabels[index]?.shortName !== '—'
-        ? props.trackLabels[index]!.shortName
-        : props.trackLabels[index]?.name ?? 'Empty track',
+      gridName: props.trackLabels[index]?.gridName ?? props.trackLabels[index]?.name ?? 'Empty track',
       instrumentId: entry?.instrumentId ?? 49 + index,
       midiSlot: entry?.trackerSlot ?? 48 + index,
       muted: props.trackMutes?.[index] ?? false,
@@ -126,7 +123,7 @@ const tracks = computed(() =>
             @keydown="onTrackKeydown($event, track.index)"
           >
             <span class="channel-card__track-num">{{ String(track.index + 1).padStart(2, '0') }}</span>
-            <span class="channel-card__name" :title="track.label">{{ track.displayName }}</span>
+            <span class="channel-card__name" :title="track.gridName">{{ track.gridName }}</span>
             <span v-if="track.entry" class="channel-card__hint">
               {{ track.entry.noteCount.toLocaleString() }}
             </span>
@@ -173,7 +170,7 @@ const tracks = computed(() =>
               <div><dt>MID</dt><dd>{{ track.instrumentId }}</dd></div>
               <div><dt>Notes</dt><dd>{{ track.entry.noteCount.toLocaleString() }}</dd></div>
             </dl>
-            <p v-if="track.label !== track.displayName" class="channel-card__full-name">{{ track.label }}</p>
+            <p v-if="track.label !== track.gridName" class="channel-card__full-name">{{ track.label }}</p>
             <div v-if="track.entry.fxMapping.length" class="channel-card__fx">
               <span
                 v-for="(mapping, fxIndex) in track.entry.fxMapping"
@@ -328,8 +325,11 @@ const tracks = computed(() =>
   font-size: 11px;
   font-weight: 600;
   line-height: 1.2;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .channel-card__hint {

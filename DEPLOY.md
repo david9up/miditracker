@@ -21,7 +21,7 @@ Confirm:
 - [ ] `docs/screenshots/` contains all five PNGs (see `docs/screenshots/README.md`)
 - [ ] No personal paths in `fixtures/**/manifest.json`
 - [ ] `npm run build:pages` — open `dist/index.html` and check asset URLs use `/miditracker/`
-- [ ] About dialog shows **v1.0.0**
+- [ ] About dialog shows **v1.0.1**
 
 ## GitHub repo setup
 
@@ -59,7 +59,7 @@ The Pages workflow must build with `DEPLOY_PAGES=true` so Vite uses `base: '/mid
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `test.yml` | push / PR to `main` | `npm ci` → test → build |
-| `pages.yml` | push to `main` | test → `build:pages` → deploy `dist/` |
+| `pages.yml` | manual (`workflow_dispatch`) | test → `build:pages` → deploy `dist/` |
 
 ## Manual Pages build
 

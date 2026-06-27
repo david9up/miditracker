@@ -120,7 +120,7 @@ function cancelTitleEdit() {
       <div class="transport__group transport__group--pattern">
         <div class="metric metric--pattern">
           <span class="metric__label">Pattern</span>
-          <span class="metric__value">{{ patternName }}</span>
+          <span class="metric__value" :title="patternName">{{ patternName }}</span>
         </div>
         <div class="transport__pattern-nav tracker-btn-group" aria-label="Song order">
           <button
@@ -372,8 +372,8 @@ function cancelTitleEdit() {
 }
 
 .metric--pattern {
-  min-width: 5.5rem;
-  max-width: 9rem;
+  min-width: 8rem;
+  max-width: 16rem;
 }
 
 .metric--pattern .metric__value {

@@ -2,6 +2,19 @@
 
 All notable changes to MidiTracker are documented here.
 
+## [1.0.1] — 2026-06-27
+
+### Fixed
+
+- Channel list and transport bar now show full instrument and pattern names instead of hard 14-character truncation
+- Pattern title in the header has more room before CSS ellipsis kicks in
+
+### Changed
+
+- GitHub Pages deploy is manual only (`workflow_dispatch`) — no automatic deploy on push to `main`
+
+[1.0.1]: https://github.com/david9up/miditracker/releases/tag/v1.0.1
+
 ## [1.0.0] — 2026-06-28
 
 First public release.

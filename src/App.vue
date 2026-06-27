@@ -37,7 +37,6 @@ import {
   gmSoundfont,
   instrumentLabelForTrack,
   compactInstrumentLabel,
-  shortInstrumentLabel,
 } from '@/lib/gm-soundfont'
 import { clampSongBpm, resizePattern } from '@/lib/pattern-session'
 import {
@@ -366,7 +365,6 @@ const trackLabels = computed(() =>
     return {
       name,
       gridName: compactInstrumentLabel(name),
-      shortName: shortInstrumentLabel(compactInstrumentLabel(name)),
     }
   }),
 )

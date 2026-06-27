@@ -2,6 +2,29 @@
 
 Enables **you** and the **Cursor agent** to push to [david9up/miditracker](https://github.com/david9up/miditracker) without password prompts.
 
+## Troubleshooting
+
+### `permission denied` on `~/.config/gh/config.yml`
+
+If `gh auth login` fails with permission denied on `.config`, the folder may be owned by root (sometimes after a sandboxed or sudo install). Fix ownership:
+
+```bash
+sudo chown -R "$(whoami)" ~/.config
+chmod -R u+rwX ~/.config
+mkdir -p ~/.config/gh
+gh auth login
+gh auth setup-git
+```
+
+Also fixes git warnings about `~/.config/git/ignore`.
+
+### Homebrew `gh` install fails
+
+```bash
+sudo chown -R "$(whoami)" /opt/homebrew
+brew install gh
+```
+
 ## 1. GitHub CLI
 
 ```bash

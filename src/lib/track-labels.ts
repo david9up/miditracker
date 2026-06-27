@@ -1,6 +1,5 @@
 export interface TrackInstrumentLabel {
   name: string
-  /** Compact label for the pattern grid (no Ch prefix, not hard-truncated). */
+  /** Compact label for the pattern grid and channel list (no Ch prefix). */
   gridName: string
-  shortName: string
 }

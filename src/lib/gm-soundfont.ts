@@ -183,11 +183,6 @@ export function instrumentLabelForTrack(
   return gmProgramName(program)
 }
 
-export function shortInstrumentLabel(label: string, max = 14): string {
-  if (label.length <= max) return label
-  return `${label.slice(0, max - 1)}…`
-}
-
 /** Strip redundant MIDI channel prefix for grid headers (track number is shown separately). */
 export function compactInstrumentLabel(label: string): string {
   const trimmed = label.trim()

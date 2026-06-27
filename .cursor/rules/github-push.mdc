@@ -39,7 +39,9 @@ Runs pre-push checks (optional) and pushes with `gh` auth context.
 
 ## Pages deploy
 
-Pushing to **main** triggers **Deploy GitHub Pages** workflow. No manual deploy unless workflow failed.
+**Do not deploy automatically.** GitHub Pages runs only when you explicitly trigger **Actions → Deploy GitHub Pages → Run workflow** (or when the user asks the agent to deploy).
+
+Pushing to **main** runs CI tests only — it does **not** update the live site.
 
 ## One-time human setup
 

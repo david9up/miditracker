@@ -1,7 +1,7 @@
 {
   "name": "miditracker",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browser-based Standard MIDI to Polyend Tracker+ converter — import, edit, validate, export.",
   "author": "David Malcher",
   "license": "MIT",
