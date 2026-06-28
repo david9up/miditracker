@@ -54,12 +54,20 @@ The agent pushes over HTTPS and triggers **Deploy GitHub Pages**. Grant `workflo
 gh auth refresh -h github.com -s repo,workflow
 ```
 
-Complete the browser/device step when prompted. Verify:
+Complete the browser/device step when prompted, then verify **in the same Terminal**:
 
 ```bash
-./scripts/gh-auth-check.sh
-gh workflow list
+cd /Users/davidmalcher/Projects/miditracker
+./scripts/verify-agent-github.sh
 ```
+
+If verify passes in Terminal but the agent still gets `Forbidden`, export a token for Cursor’s shell (Settings → search “terminal integrated env” → add `GH_TOKEN`), or add to `~/.zprofile`:
+
+```bash
+export GH_TOKEN="$(gh auth token)"
+```
+
+Create a classic PAT (repo + workflow) only if refresh keeps failing: GitHub → Settings → Developer settings → Personal access tokens.
 
 ## 3. Wire Git to GitHub CLI
 

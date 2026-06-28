@@ -9,6 +9,12 @@ REF="${1:-main}"
 WORKFLOW="Deploy GitHub Pages"
 SITE="https://david9up.github.io/miditracker/"
 
+export GH_TOKEN="${GH_TOKEN:-${GITHUB_TOKEN:-$(gh auth token 2>/dev/null || true)}}"
+if [[ -z "$GH_TOKEN" ]]; then
+  echo "error: no GitHub token — run: gh auth refresh -h github.com -s repo,workflow" >&2
+  exit 1
+fi
+
 "$(dirname "$0")/gh-auth-check.sh"
 
 echo "→ triggering ${WORKFLOW} on ${REF}"

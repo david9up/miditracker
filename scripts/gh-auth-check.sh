@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Verify gh is logged in with scopes needed for push + Pages deploy.
+# Verify gh can push and trigger Actions (repo + workflow scopes).
 set -euo pipefail
 
 if ! command -v gh >/dev/null 2>&1; then
@@ -7,12 +7,17 @@ if ! command -v gh >/dev/null 2>&1; then
   exit 1
 fi
 
-if ! gh auth status >/dev/null 2>&1; then
-  echo "error: not logged in — run: gh auth login" >&2
+if ! gh auth token >/dev/null 2>&1; then
+  echo "error: no gh token — run: gh auth login" >&2
   exit 1
 fi
 
-echo "→ gh account: $(gh api user -q .login 2>/dev/null || echo unknown)"
+LOGIN="$(gh api user -q .login 2>/dev/null || true)"
+if [[ -z "$LOGIN" ]]; then
+  echo "error: gh token invalid — run: gh auth refresh -h github.com -s repo,workflow" >&2
+  exit 1
+fi
+echo "→ gh account: ${LOGIN}"
 
 if ! gh api repos/david9up/miditracker/actions/workflows --jq '.total_count' >/dev/null 2>&1; then
   echo "error: missing Actions/workflow scope — run:" >&2
