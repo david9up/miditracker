@@ -43,8 +43,23 @@ Recommended choices:
 | Prompt | Choice |
 |--------|--------|
 | Account | **GitHub.com** |
-| Protocol | **SSH** (you already use `git@github.com:…`) or **HTTPS** (simpler for agent + credential helper) |
+| Protocol | **HTTPS** (best for Cursor agent — uses credential helper) |
 | Authenticate | **Login with a web browser** |
+
+### Agent push + deploy scopes (required once)
+
+The agent pushes over HTTPS and triggers **Deploy GitHub Pages**. Grant `workflow` scope:
+
+```bash
+gh auth refresh -h github.com -s repo,workflow
+```
+
+Complete the browser/device step when prompted. Verify:
+
+```bash
+./scripts/gh-auth-check.sh
+gh workflow list
+```
 
 ## 3. Wire Git to GitHub CLI
 
@@ -84,9 +99,10 @@ git push origin main
 
 ## Agent notes
 
-The Cursor agent **cannot** push from a sandboxed shell (DNS/SSH blocked). After this setup, the agent should:
+The Cursor agent **cannot** use SSH from a sandboxed shell (DNS blocked). After setup above:
 
-- Use **`./scripts/push-to-github.sh`** or explicit push commands with **full permissions**
-- Use **`gh`** for PRs, releases, and repo checks
+- **Push:** `./scripts/push-to-github.sh` or `npm run push:github` (HTTPS via gh)
+- **Deploy Pages:** `npm run deploy:pages` (only when you ask — not on every push)
+- **Check auth:** `./scripts/gh-auth-check.sh`
 
 Do **not** store personal access tokens in the repo. `gh` keeps credentials in the macOS keychain.

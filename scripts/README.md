@@ -11,7 +11,10 @@ Developer utilities — not required to run the app.
 | `sample-midi-corpus.py` | Rebuild `fixtures/midi-corpus/` from local MIDI library |
 | `build-game-corpus.py` | Rebuild `fixtures/game-corpus/` from local game MIDI folder |
 | `probe-game-export.ts` | `npx tsx scripts/probe-game-export.ts` — batch export validation on game corpus |
-| `push-to-github.sh` | `./scripts/push-to-github.sh [branch]` — push to origin (see GITHUB_SETUP.md) |
+| `push-to-github.sh` | `./scripts/push-to-github.sh [branch]` — HTTPS push via gh |
+| `gh-push.sh` | `./scripts/gh-push.sh <ref>` — low-level HTTPS push |
+| `gh-auth-check.sh` | `./scripts/gh-auth-check.sh` — verify repo + workflow scopes |
+| `deploy-pages.sh` | `./scripts/deploy-pages.sh [branch]` — trigger Pages workflow and wait |
 
 Corpus rebuild env vars (see `fixtures/README.md`):
 

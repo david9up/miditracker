@@ -40,7 +40,9 @@
     "test:e2e": "playwright test",
     "screenshots": "playwright test tests/e2e/readme-screenshots.spec.ts",
     "release": "npm run test:all && npm run build",
-    "validate:export": "tsx scripts/validate-export.ts"
+    "validate:export": "tsx scripts/validate-export.ts",
+    "push:github": "./scripts/push-to-github.sh",
+    "deploy:pages": "./scripts/deploy-pages.sh"
   },
   "dependencies": {
     "@polyend/tracker-lib": "^0.1.2",
