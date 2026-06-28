@@ -7,8 +7,8 @@ const DEV_PORT = Number(process.env.DEV_PORT) || 5310
 /** GitHub project site: https://<user>.github.io/<repo>/ */
 function resolveBase(): string {
   if (process.env.DEPLOY_PAGES === 'true' || process.env.GITHUB_PAGES === 'true') {
-    const repo = process.env.GITHUB_REPOSITORY?.split('/')[1]
-    return `/${repo ?? 'miditracker'}/`
+    // Relative base survives project-site subpaths without hard-coding the repo name.
+    return './'
   }
   return '/'
 }

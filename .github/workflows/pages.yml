@@ -33,7 +33,7 @@ jobs:
           DEPLOY_PAGES: 'true'
 
       - name: Verify GitHub Pages asset paths
-        run: grep -q '/miditracker/assets/' dist/index.html
+        run: grep -qE '(\./|/miditracker/)assets/' dist/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
